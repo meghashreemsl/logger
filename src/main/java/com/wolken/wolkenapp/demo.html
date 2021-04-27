@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function validate(){
+	var name = document.f1.name.value;
+	var length = documnet.f1.password.value.length;
+	var status = false;
+	if(name == " "){
+		document.getElementById("namelocation").innerHTML="Please enter your name";
+		status = false;
+	}
+	else{
+		document.getElementById("namelocation").innerHTML="correct";
+		status=true;
+	}
+	return status;
+}
+</script>
+<form name="f1" action="megha" onsubmit="return validate()">
+<input type="text" name="name"/> <span id =  "namelocation" style="color:red"></span>
+<input type="password" name="password"/> <span id="passwordlocation" style="color:red"></span>
+<input type="submit" value="register" />
+
+</form>
+
+</body>
+</html>
